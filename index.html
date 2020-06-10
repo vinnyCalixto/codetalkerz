@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie-edge">
+			<link rel="shortcut icon" href="./images/favicon.ico"/>
+			<title>Fácil Certificadora - Home</title>
+			<link rel="stylesheet" type="text/css" href="reset.css">
+			<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			
+			<style type="text/css">
+
+
+
+				body {
+
+					font-family: 'Open Sans', sans-serif;
+				}
+
+				/* start / Header */
+				.wrapperTop {
+
+					width: 100%;
+					height: 179px;
+					background-color: #efefef;
+
+				}
+
+				.wrapperTop .top {
+
+					width: 100%;
+					height: 30px;
+					font: 10px/30px 'Roboto Condensed', Tahoma, Geneva, sans-serif;
+					color: #0f9200;
+				}
+
+				.box960 {
+
+					width: 960px;
+					display: table;
+					margin: 0 auto;
+					position: relative;
+				}
+				
+				.wrapperTop .top .slogan {
+
+					float: left;
+				}
+
+				.wrapperTop .top .alignRight {
+
+					float: right;
+					line-height: 14px;
+					padding-top: 8px;
+				}
+
+				.wrapperTop .top .network {
+
+					float: right;
+				}
+
+				.wrapperTop .top .network li {
+
+					float: right;
+					margin-left: 11px;
+					
+				}
+
+				.wrapperTop .top .network li a {
+
+					position: relative;
+					left: 110px;
+					top: -16px
+				}
+
+				.wrapperTop .top .network li a img:hover {
+
+					transform: scale(1.1);
+					cursor: pointer;
+				}
+
+				.wrapperTop .mainHeader {
+
+					width: 100%;
+					height: 100px;
+					background: #fff;
+				}
+
+				.wrapperTop .mainHeader .logo {
+
+					width: 200px;
+					height: 51px;
+					margin-top: 15px;
+					float: left;
+
+				}
+
+				.wrapperTop .mainHeader .navServicos {
+
+					float: right;
+					margin-top: 20px;
+					min-width: 536px;
+				}
+
+				.wrapperTop .mainHeader .navServicos li {
+
+					float: left;
+					margin-left: 32px;
+					position: relative;
+
+				}
+
+				.wrapperTop .mainHeader .navServicos li a {
+
+					font: 9px 'Roboto Condensed', Tahoma, Geneva, sans-serif;
+					padding-top: 0;
+					display: block;
+					text-align: center;
+					width: 40px;
+					text-decoration: none;
+					color: #0f9200;
+
+				}
+
+				.wrapperTop .mainHeader .navServicos li a:hover {
+
+					text-decoration: underline;
+				}
+
+
+				.wrapperTop .navMain {
+
+					width: 100%;
+					border-bottom: 2px solid #0f9200;
+					height: 46.5px;
+					display: block;
+				}
+
+				.menu {
+
+					width: 80%;
+					margin: 0 10%;
+
+				}
+
+				.menu ul {
+
+					list-style: none;
+					position: absolute;
+
+				}
+
+				.menu ul li {
+
+					width: 170px;
+					float: left;
+
+				}
+
+				.menu ul li a img{
+
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					
+				}
+
+				.menu ul .bt_home a {
+
+					width: 25px; 
+					height: 18px; 
+					background: #0f9200; 
+					margin-right: 30px;
+					border-radius: 5px;
+					position: relative;
+				}
+
+				
+
+				.menu a {
+
+					padding: 12.5px;
+					height: 25px;
+					display: block;
+					text-decoration: none;
+					text-align: center;
+					color: #323232;
+					font-size: 15px;
+					margin-top: 2px;
+
+				}
+
+
+				.menu ul ul {
+
+					position: absolute;
+					display: none;
+					
+					
+				}
+
+				.menu ul li:hover ul {
+
+
+					display: block;
+					
+				}
+
+				.menu a:hover {
+
+					color: #0f9200;
+					font-weight: bold;
+					box-shadow: 2px 2px 4px #000000;
+					border-radius: 5px;
+					background-color: #efefef;
+					opacity: 0.9;
+					
+				}
+				
+				.menu ul ul li {
+
+					float: none;
+					width: 180px;
+					background-color: #ccc;
+					border-radius: 5px;
+
+				}
+
+				
+
+				.menu ul ul li:last-child {
+
+					border: none;
+				}
+
+				.slider {
+
+					position: relative;
+					overflow: hidden;
+					height: 80vh;
+					width: 100%;
+
+				}
+
+				.slide {
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					transition: opacity 0.4s ease-in-out;
+				}
+
+				.slide.current {
+
+					opacity: 1;
+				}
+
+				.slide .content {
+
+					position: absolute;
+					bottom: 70px;
+					left: -600px;
+					opacity: 0;
+					width: 600px;
+					background-color: rgba(255, 255, 255, 0.8);
+					color: #333;
+					padding: 35px;
+				}
+
+				.slide .content h1 {
+
+					margin-bottom: 10px;
+				}
+
+				.slide.current .content {
+
+					opacity: 1;
+					transform: translateX(600px);
+					transition: all 0.7s ease-in-out 0.3s;
+				}
+
+				.buttons button#next {
+
+					position: absolute;
+					top: 60%;
+					right: 15px;
+				}
+
+				.buttons button#prev {
+
+					position: absolute;
+					top: 60%;
+					left: 15px;
+				}
+
+				.buttons button {
+
+					border: 2px solid #fff;
+					background-color: transparent;
+					color: #fff;
+					cursor: pointer;
+					padding: 11px 15px;
+					border-radius: 50%;
+					outline: none;
+				}
+
+				.buttons button:hover {
+
+					background-color: #fff;
+					color: #333;
+				}
+
+				@media (max-width: 500px){
+
+					.slide .content {
+
+						bottom: -300px;
+						left: 0;
+						width: 100%;
+					}
+
+					.slide.current .content {
+
+						transform: translateY(-300px);
+					}
+				}
+
+				.slide:first-child {
+
+					background: url(./images/banner.png) no-repeat center top/cover;
+
+				}
+
+				.slide:nth-child(2) {
+
+					background: url(./images/banner1.jpeg) no-repeat center top/cover;
+
+				}
+
+				.slide:nth-child(3) {
+
+					background: url(./images/banner2.jpg) no-repeat center top/cover;
+
+				}
+
+				
+
+				.produtos {
+
+					width: 100%;
+					padding: 40px 10px;
+					box-sizing: border-box;
+					text-align: center;
+					background-color: #ccc;
+					display: block;
+				}
+
+				
+
+				.produtos li {
+
+					display: inline-block;
+					width: 20%;
+					height: 350px;
+					margin: 0 auto;
+					margin-right: 5px;
+					background: #efefef;
+					text-align: center;
+					padding: 30px;
+					box-sizing: border-box;
+					text-align: center;
+					vertical-align: top;
+					box-shadow: 0 8px 6px -6px black;
+					border-radius: 5px;
+				}
+
+				.produtos li a {
+
+					padding: 10px;
+				}
+				
+				.produtos li img {
+
+					width: 65%;
+					height: 40%;
+				}
+
+				.produtos li h1 {
+
+					padding: 15px 20px;
+					font-size: 18px;
+					font-weight: bold;
+					color: #0a5d00;
+				}
+
+				.produtos li p {
+
+					font-size: 12px;
+					line-height: 1.4;
+				}
+
+				.produtos li input {
+
+					background-color: #ccc;
+					border: none;
+					height: 35px;
+					width: 100px;
+					border-radius: 5px;
+					transition: 0.5s all;
+
+				}
+
+				.produtos li input:hover {
+
+					box-shadow: 2px 2px 4px #000000;
+					cursor: pointer;
+				}
+
+				.choiceFacil ul h1 {
+
+					text-align: center;
+					padding: 20px 30px;
+					color: #323232;
+					font-size: 28px;
+
+				}
+				
+
+				/* end / Header */
+
+
+				/* start / Nav */
+				/* end / Nav */
+
+
+				/* start / nav2*/
+				/* end / nav2*/
+
+
+				/* start / Section Galeria*/
+				/* end / Section Galeria*/
+
+			</style>
+
+		</head>
+		<body>
+			<!-- start / Header -->
+			<header>
+				<div class="wrapperTop">
+					<div class="top">
+						<div class="box960">
+							<p class="slogan">Venha Emitir Conosco, <span style="font-size: 12px;">Seja Fácil!</span></p>
+							<div class="alignRight">
+								<p>Canais de Contato: Suporte (11) 99999-9999 | Operacional (11) 99999-9999</p>
+								<ul class="network">
+									<li>
+										<a href="#"><img src="./images/facebook.png"></a>
+									</li>
+									<li>
+										<a href="#"><img src="./images/facebook.png"></a>
+									</li>
+									<li>
+										<a href="#"><img src="./images/facebook.png"></a>
+									</li>
+									<li>
+										<a href="#"><img src="./images/facebook.png"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="mainHeader">
+						<div class="box960">
+							<h1 class="logo">
+								<a href="#"><img src="./images/logo.png" style="width: 70%;"></a>
+							</h1>
+							<ul class="navServicos">
+								<li class="ico_agenda">
+									<a href="#" target="blank"><img src="./images/calendar.png" style="margin-bottom: 3px;">Agendar<br>Validação</a>
+								</li>
+								<li class="ico_atendimento">
+									<a href="#" target="blank"><img src="./images/location.png" style="margin-bottom: 3px;">Locais de<br>Atendimento</a>
+								</li>
+								<li class="ico_renovar">
+									<a href="#" target="blank"><img src="./images/clock.png" style="margin-bottom: 3px;">Renovar<br>Certificados</a>
+								</li>
+								<li class="ico_pedidos">
+									<a href="#" target="blank"><img src="./images/list.png" style="margin-bottom: 3px;">Meus<br>Pedidos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="navMain">
+						<nav class="menu">
+							<ul>
+								<li class="bt_home" style="width: 60px;"><a href="index.html"><img src="./images/browser.png"></a></li>
+								<li><a href="#" style="height: 18px; font-size: 13px; box-shadow: none;">Certificados Digitais ▼</a>
+									<ul>
+										<li><a href="#"> e-CPF &#62; </a></li>
+										<li><a href="#"> e-CNPJ &#62; </a></li>
+										<li><a href="#"> NF-e &#62; </a></li>
+										<li><a href="#"> CT-e &#62; </a></li>
+									</ul>
+								</li>
+								<li><a href="#" style="height: 18px; font-size: 13px; box-shadow: none;">Suporte e Instalação ▼</a>
+									<ul>
+										<li><a href="#">Drivers &#62; </a></li>
+										<li><a href="#">Manuais &#62; </a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<!-- end / Header -->
+
+			<!-- start nav menu -->
+			<div class="banner">
+
+				<div class="slider">
+					<div class="slide current">
+						<div class="content">
+							<h1>Primeiro Slide</h1>
+							<p>Lorem Ipsum</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Segundo Slide</h1>
+							<p>Lorem Ipsum</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Terceiro Slide</h1>
+							<p>Lorem Ipsum</p>
+						</div>
+					</div>
+				</div>
+				<div class="buttons">
+					<button id="prev"> &#5176; </button>
+					<button id="next"> &#5171; </button>
+				</div>
+
+
+				<script src="slide.js"></script>
+
+
+
+				<ul class="produtos">
+					<li>
+						<img src="./images/user.png">
+						<h1>CPF</h1>
+						<p>Certificado Digital e-CPF ICP-Brasil para pessoa Física</p>
+						<p style="padding: 10px; font-size: 18px; font-weight: bold; color: #0a5d00;">R$135,00</p>
+						<form action="http://loja.facilcertificadora.com.br/produtos/detalhes/4">
+							<input type="submit" id="bt_comprar" value="&#128722; Comprar">
+						</form>
+					</li>
+					<li>
+						<img src="./images/desk.png">
+						<h1>CNPJ</h1>
+						<p>Certificado Digital e-CPF ICP-Brasil para pessoa Física</p>
+						<p style="padding: 10px; font-size: 18px; font-weight: bold; color: #0a5d00;">R$135,00</p>
+						<form action="http://loja.facilcertificadora.com.br/produtos/detalhes/17">
+							<input type="submit" id="bt_comprar" value="&#128722; Comprar">
+						</form>
+					</li>
+					<li>
+						<img src="./images/invoice.png">
+						<h1>NF-e</h1>
+						<p>Certificado Digital e-CPF ICP-Brasil para pessoa Física</p>
+						<p style="padding: 10px; font-size: 18px; font-weight: bold; color: #0a5d00;">R$135,00</p>
+						<form action="http://loja.facilcertificadora.com.br/produtos/detalhes/30">
+							<input type="submit" id="bt_comprar" value="&#128722; Comprar">
+						</form>
+					</li>
+					<li>
+						<img src="./images/truck.png">
+						<h1>CT-e</h1>
+						<p>Certificado Digital e-CPF ICP-Brasil para pessoa Física</p>
+						<p style="padding: 10px; font-size: 18px; font-weight: bold; color: #0a5d00;">R$135,00</p>
+						<form action="http://loja.facilcertificadora.com.br/produtos/detalhes/110">
+							<input type="submit" id="bt_comprar" value="&#128722; Comprar">
+						</form>
+					</li>
+				</ul>
+			</div>
+			<div class="choiceFacil">
+				<ul>
+					<h1>POR QUE ESCOLHER A FÁCIL</h1>
+					<li>
+						<img src="">
+						<h2></h2>
+						<p></p>
+					</li>
+					<li>
+						<img src="">
+						<h2></h2>
+						<p></p>
+					</li>
+					<li>
+						<img src="">
+						<h2></h2>
+						<p></p>
+					</li>
+					<li>
+						<img src="">
+						<h2></h2>
+						<p></p>
+					</li>
+				</ul>
+
+			</div>
+		</body>
+	</html>
